@@ -801,7 +801,7 @@ the if/then/else and for expressions. To build this example, use:
 .. code-block:: bash
 
     # Compile
-    clang++ -g toy.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core orcjit native` -O3 -o toy
+    clang++ -g -rdynamic toy.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core orcjit native` -O3 -o toy
     # Run
     ./toy
 
